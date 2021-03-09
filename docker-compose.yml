@@ -1,0 +1,23 @@
+version: '3.6'
+  
+services:
+  api-gateway:
+    build: .
+    ports:
+      - 8762:8762
+    environment:
+      - example=my value  
+    volumes:
+      - javatmp:/tmp
+    networks:
+      - susalud_
+
+networks:
+  susalud_:
+    external:
+      name: susalud_network    
+    
+    
+volumes:
+  # default dir /var/lib/docker/volumes
+  javatmp:

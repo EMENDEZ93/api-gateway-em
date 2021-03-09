@@ -1,0 +1,24 @@
+# Configure this Discovery Server
+spring:
+  application:
+    name: proxy-service
+
+server:
+  port: 8080   # HTTP (Tomcat) port
+
+  
+zuul:
+  ignoredServices: '*'
+  routes:
+    autenticacion:
+      path: /api/autenticacion**
+      serviceId: autenticacion
+      stripPrefix: false
+      url: http://localhost:8090
+
+    presentVerb:
+      path: /api/present/verb/**
+      serviceId: presentVerb
+      stripPrefix: false
+      url: http://localhost:8091
+    
