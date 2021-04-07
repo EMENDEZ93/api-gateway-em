@@ -4,7 +4,7 @@ spring:
     name: proxy-service
 
 server:
-  port: 8080   # HTTP (Tomcat) port
+  port: 8081   # HTTP (Tomcat) port
 
   
 zuul:
