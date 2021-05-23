@@ -14,11 +14,11 @@ zuul:
       path: /api/autenticacion**
       serviceId: autenticacion
       stripPrefix: false
-      url: http://localhost:8090
+      url: http://autenticacion:8090
 
     presentVerb:
       path: /api/present/verb/**
       serviceId: presentVerb
       stripPrefix: false
-      url: http://localhost:8091
+      url: http://present-verb:8091
     
